@@ -11,7 +11,7 @@ class testcon extends Command
      *
      * @var string
      */
-    protected $signature = 'testcon';
+    protected $signature = 'testcon{option}';
 
     /**
      * The console command description.
@@ -39,5 +39,7 @@ class testcon extends Command
     {
         //
         $this->comment('this is a console test');
+        $option = $this->argument('option');
+        $this->comment($option);
     }
 }
